@@ -11,23 +11,23 @@ export default function App() {
 
   function calculator(){
     const splitNumbers = currentNumber.split(' ')
-    const fistNumber = parseFloat(splitNumbers[0])
-    const lastNumber = parseFloat(splitNumbers[2])
+    const fistOperand = parseFloat(splitNumbers[0])
+    const lastOperand = parseFloat(splitNumbers[2])
     const operator = splitNumbers[1]
 
     // Faz ação referente tecla pressionada
     switch(operator){
       case '+':
-        setCurrentNumber((fistNumber + lastNumber).toString())
+        setCurrentNumber((fistOperand + lastOperand).toString())
         return
       case '-': 
-        setCurrentNumber((fistNumber - lastNumber).toString())
+        setCurrentNumber((fistOperand - lastOperand).toString())
         return
       case 'x':
-        setCurrentNumber((fistNumber * lastNumber).toString())
+        setCurrentNumber((fistOperand * lastOperand).toString())
         return
       case '/': 
-        setCurrentNumber((fistNumber / lastNumber).toString())
+        setCurrentNumber((fistOperand / lastOperand).toString())
         return
     }
   }
