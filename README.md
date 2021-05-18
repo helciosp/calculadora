@@ -5,4 +5,4 @@ Calculadora(react-native)
 Aplicativo para android para fazer operações simples.
 
 # Observação
-Esse aplicativo foi desenvolvido pela instituição de ensino Senac EaD, apenas fiquei resposável por documentar e realizar manutenções.
+Esse aplicativo foi desenvolvido pela instituição de ensino Senac EaD, com objetivo de uma atividade, na qual fiquei resposável por documentar e realizar manutenções.
