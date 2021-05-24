@@ -15,6 +15,7 @@ export default function App() {
     const fistNumber = parseFloat(splitNumbers[0])
     const lastNumber = parseFloat(splitNumbers[2])
     const operator = splitNumbers[1]
+    console.log(splitNumbers)
 
     // Faz ação referente tecla pressionada
     switch(operator){
@@ -33,9 +34,27 @@ export default function App() {
     }
   }
 
+  function revert(){
+    let oposto = parseInt(currentNumber)
+
+    oposto *= -1
+
+    if(oposto < 0) {
+      setCurrentNumber( '-' + currentNumber)
+    }
+    else {
+      const desmembrado = currentNumber.split(' ')
+      setCurrentNumber( desmembrado[2] )
+    }
+  }
+
   function handleInput(buttonPressed){
     console.log(buttonPressed) // Mostra no Console a tecla pressionada
     if(buttonPressed === '+' | buttonPressed === "-" | buttonPressed === "x" | buttonPressed === "/" ){
+      if(currentNumber === ''){
+        setCurrentNumber(buttonPressed)
+        return
+      }
       setCurrentNumber(currentNumber + " " + buttonPressed + " ")
       return
     }
@@ -52,6 +71,7 @@ export default function App() {
         calculator()
         return
       case '+/-':
+        revert()
         return
     }
 
