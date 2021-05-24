@@ -31,6 +31,8 @@ export default function App() {
       case '/': 
         setCurrentNumber((fistNumber / lastNumber).toString())
         return
+      case '%' :
+        setCurrentNumber(((fistNumber / 100)) * lastNumber)
     }
   }
 
@@ -50,7 +52,7 @@ export default function App() {
 
   function handleInput(buttonPressed){
     console.log(buttonPressed) // Mostra no Console a tecla pressionada
-    if(buttonPressed === '+' | buttonPressed === "-" | buttonPressed === "x" | buttonPressed === "/" ){
+    if(buttonPressed === '+' | buttonPressed === "-" | buttonPressed === "x" | buttonPressed === "/" || buttonPressed === '%'){
       if(currentNumber === ''){
         setCurrentNumber(buttonPressed)
         return
